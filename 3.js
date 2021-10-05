@@ -11,19 +11,46 @@ let p = new Promise(function (resolve, reject) {
 
 p
     .then(function (message) {
-        console.log(`${message} - promise resolved`)
+        // console.log(`${message} - promise resolved`)
     })
     .catch(function (message) {
-        console.log(`${message} - promise rejected`)
+        // console.log(`${message} - promise rejected`)
     });
 
 let f = fetch("https://jsonplaceholder.typicode.com/users");
 
 f
-.then(function (user_data) {
-    return user_data.json();
+    .then(function (user_data) {
+        return user_data.json();
 
-})
-.then(function (json_data) {
-    console.log(json_data)
-});
+    })
+    .then(function (json_data) {
+        // console.log(json_data)
+    });
+
+/////////basic js/////////
+
+let temprature = 30;
+// console.log(temprature);
+
+let temprature_f = temprature * 1.8 + 20;
+// console.log(temprature_f);
+
+let number_of_cats = 99;
+let number_of_dogs = number_of_cats;
+// console.log(number_of_dogs)
+
+let bookcount = 100;
+function add(day) {
+    for (let i = 0; i < day; i++) {
+        bookcount += 200;
+        // console.log(bookcount)
+    }
+    return bookcount
+}
+
+add(3)
+
+let x = 3;
+let y = 1 + (x *= 3)
+// console.log(y);

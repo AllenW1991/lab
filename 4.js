@@ -15,7 +15,8 @@ function send_request() {
 
 async function get_user() {
     try {
-        let user = await send_request();
+        let user = await fetch("https://jsonplaceholder.typicode.com/users");
+        user = await user.json();
         console.log(user);
     } catch (error) {
         console.log(`Error: ${error}`);

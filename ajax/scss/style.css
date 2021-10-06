@@ -33,6 +33,13 @@ label {
   height: 32px;
 }
 
+.error {
+  margin-top: 16px;
+  color: red;
+  position: relative;
+  left: calc(50% - 100px);
+}
+
 textarea {
   width: 500px;
   padding-top: 8px;

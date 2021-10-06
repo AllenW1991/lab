@@ -1,0 +1,72 @@
+body {
+  background-color: #f2f3f5;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+  padding-top: 80px;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.input-style {
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 1.1em;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+label {
+  width: 200px;
+  font-size: 1.2em;
+  padding-top: 8px;
+}
+
+.input-width {
+  width: 300px;
+  height: 32px;
+}
+
+.e-mail-gender {
+  width: 314px;
+  height: 32px;
+}
+
+textarea {
+  width: 500px;
+  padding-top: 8px;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+  width: 100px;
+  height: 48px;
+  background-color: #7ce68a;
+  border: 0;
+  border-radius: 20px;
+  color: white;
+  -webkit-transition: all 0.3s 0s ease;
+  transition: all 0.3s 0s ease;
+  font-size: 16px;
+  position: relative;
+  left: calc(50% - 100px);
+  margin-top: 24px;
+}
+
+button:hover {
+  background-color: #5aa364;
+}
+/*# sourceMappingURL=style.css.map */

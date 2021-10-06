@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn AJAX 驗證表單</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./scss/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container" class="container">
+        <form id="validation_form">
+            <label for="e-mail-name">姓名</label>
+            <input class="input-width input-style" type="text" id="e-mail-name" name="name" placeholder="請輸入姓名">
+
+            <label for="e-mail-address">電子信箱</label>
+            <input class="input-width input-style " type="text" id="e-mail-address" name="e-mail" placeholder="請輸入信箱">
+
+            <label for="e-mail-gender">性別</label>
+            <select class="input-style e-mail-gender" name="gender" id="e-mail-gender" >
+                <option value="male">男性</option>
+                <option value="female">女性</option>
+            </select>
+            <label for="pass1">密碼</label>
+            <input class="input-width input-style" type="password" id="pass1" name="pass1" placeholder="請輸入密碼">
+            <label for="pass2">確認密碼</label>
+            <input class="input-width input-style" type="password" id="pass2" name="pass2" placeholder="請再次確認密碼">
+            <textarea class="input-style"  id="e-mail-message" name="message" cols="75" rows="10" placeholder="請描述您的狀況"></textarea>
+            <button id="" submit_button type="submit" name="submit">送出</button>
+        </form>
+
+        <div id="error">
+
+        </div>
+    </div>
+
+    <script src="./index.js">
+    </script>
+</body>
+
+</html>

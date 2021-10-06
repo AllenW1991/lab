@@ -54,3 +54,16 @@ add(3)
 let x = 3;
 let y = 1 + (x *= 3)
 // console.log(y);
+
+console.log("12" > "20");
+console.log(0 == false);
+console.log(0 === false);
+
+
+let sales = [100, 50, 60, 80, 90, 120, 150]
+let total = 0;
+for (let i = 0; i < sales.length; i++) {
+    console.log(sales[i]);
+    total += 1;
+}
+console.log(`共有${total}個物品`)

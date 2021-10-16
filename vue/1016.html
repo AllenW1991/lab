@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <style type="text/css">
+        .show {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <p v-text="message"></p>
+        <p v-html="message"></p>
+        <p v-text="title"></p>
+        <p v-html="title"></p>
+
+        {{message}}
+
+        <p clss="show" v-if="show"></p>
+        <p class="show" v-show="show"></p>
+        <!-- v-text簡寫 -->
+        <ul>
+            <li v-for="item in arr">{{item}}</li>
+        </ul>
+
+
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: "#app",  //DOM掛載點
+        data: {
+            message: "Vue hello again!",
+            title: "<h2>學習指令ing</h2>",
+            show: false,
+            arr: ['1.html', '2.css', '3.javascript']
+        }
+    });
+</script>
+
+</html>

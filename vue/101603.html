@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue組件重要選項</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <style>
+        .view {}
+
+        .test {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="view">
+
+        <div class="test" @click="speak"></div>
+        <div class="test" @click="run"></div>
+        <div class="test" @click="add">
+            {{str}}
+            <br>
+            {{i}}
+        </div>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: ".view",
+        data: {
+            message: "hello Vueeeee",
+            i: 0,
+        },
+        methods: {
+            run: function () {
+                alert("我不單會跑還會飛??");
+            },
+            speak: function () {
+                alert("我會說話喔喔喔喔喔");
+            },
+            add: function () {
+                this.i++;
+                console.log(this.i);
+            }
+        },
+        computed: {
+            str: function () {
+                if (this.i <= 5) {
+                    return ("用點力好ㄇ")
+                } else if (this.i <= 10) {
+                    return ("沒假奔嗎?")
+                } else if (this.i <= 15) {
+                    return ("沒感覺")
+                } else {
+                    return ("舒爽")
+                }
+            }
+        },
+        watch: {
+            i: function (new_val, old_val) {
+                console.log(new_val, old_val);
+            }
+        }
+    });
+</script>
+
+</html>

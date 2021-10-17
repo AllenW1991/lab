@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Document</title>
+
+  <script
+    src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js'
+    integrity='sha512-o9SZrtqlGkpa7EF+dDrNjEdRFFYhymlrBzDKpolHNolxsyx0IcXAbEm9i1e8QpoiMgEdKZVtY8XiK1t8i6jVDA=='
+    crossorigin='anonymous'
+  ></script>
+</head>
+
+<body>
+  <div id="app">
+    <section>
+      <div class="container">
+        <div class="title">
+          <div class="input">{{name}},{{sex}},年齡為:{{age}},<br>
+            {{favor.length?"喜歡:":""}}{{favor.join(",")}},{{member ? "已":"未"}}成為會員
+            <div class="menu">
+              <table>
+                <tr>
+                  <td class="title">
+                    姓名:
+                  </td>
+                  <td>
+                    <input
+                      type="text "
+                      v-model="name"
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title">
+                    性別:
+                  </td>
+                  <td>
+                    <input
+                      type="radio"
+                      value="女"
+                      v-model="sex"
+                    >女
+                    <input
+                      type="radio"
+                      value="男"
+                      v-model="sex"
+                    >男
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title">
+                    年齡:
+                  </td>
+                  <td><select v-model="age">
+                      <option>20以下</option>
+                      <option>21-30間</option>
+                      <option>31-40間</option>
+                      <option>41以上
+                      <option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title">
+                    喜歡:
+                  </td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      value="爬山"
+                      v-model="favor"
+                    >爬山
+                    <input
+                      type="checkbox"
+                      value="看YT"
+                      v-model="favor"
+                    >看YT
+                    <input
+                      type="checkbox"
+                      value="吃美食"
+                      v-model="favor"
+                    >吃美食
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    會員:
+                  </td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      v-model="member"
+                    >加入
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="./day5.js"></script>
+</body>
+
+</html>

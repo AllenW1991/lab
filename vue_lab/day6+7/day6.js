@@ -1,6 +1,6 @@
 let data = {
   input: {
-    type: "主廚的話",
+    type: "全部",
     title: "",
 
   },
@@ -52,5 +52,28 @@ let vm = new Vue({
         this.input.title = ""
       }
     }
+  },
+  computed: {
+    typeMenu() {
+      if (this.input.type == "全部") {
+        return this.menu;
+      } else {
+        return this.menu.filter(item => {
+          return item.type == this.input.type
+        })
+      }
+    },
+    titleMenu() {
+      if (this.input.title) {
+        return this.typeMenu.filter(item => {
+          let content = item.title.toLowerCase();
+          let keyword = this.input.title.toLowerCase()
+          return content.indexOf(keyword) != -1;
+        })
+      } else {
+        return this.typeMenu
+      }
+    }
+
   }
 })

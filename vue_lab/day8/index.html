@@ -88,18 +88,20 @@
           </div>
           <div class="menu">
             <div
+            v-if="content"
               class="menuItem"
-              v-for="(item,index) in titleMenu"
             >
-              <span class="number">{{index +1 }}</span>
-              <span class="type">{{item.type}}</span>
+              <span class="number">{{content.index +1 }}</span>
+              <!-- <span class="type">{{item.type}}</span> -->
               <a
                 href="javascript:;"
                 class="title"
                 target="vue-iron"
-              >{{item.title}}</a>
+                :href="content.link"
+              >{{content.link}}</a>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -110,7 +112,6 @@
     integrity='sha512-o9SZrtqlGkpa7EF+dDrNjEdRFFYhymlrBzDKpolHNolxsyx0IcXAbEm9i1e8QpoiMgEdKZVtY8XiK1t8i6jVDA=='
     crossorigin='anonymous'
   ></script>
-  <script src="./day6.js"></script>
   <script src="./day8.js"></script>
 
 </body>

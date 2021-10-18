@@ -66,6 +66,13 @@ let vm = new Vue({
       } else {
         return []
       }
+    },
+    content() {
+      if (this.input.title) {
+        return this.titleList.map[this.input.title];
+      } else {
+        return null;
+      }
     }
   }
 })

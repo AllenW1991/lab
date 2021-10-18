@@ -30,5 +30,42 @@ let data = {
     { type: "精選甜點", title: "靜態渲染 VuePress 漸層飲", link: "javascript:;" },
     { type: "精選甜點", title: "風情萬種 Nuxt.js 千層糕", link: "javascript:;" },
     { type: "主廚的話", title: "餐後心得與其他資訊", link: "javascript:;" },
-  ]
+  ],
+  input: {
+    type: null,
+    title: null
+  }
 }
+
+let vm = new Vue({
+  el: "#app",
+  data: data,
+  computed: {
+    typeList() {
+      let obj = {
+        sort: [],
+        map: {}
+      }
+      this.menu.forEach(({ type, title, link }, index) => {
+        if (!obj.map[type]) {
+          obj.sort.push(type);
+          obj.map[type] = {
+            sort: [],
+            map: {}
+          }
+        }
+        obj.map[type].sort.push(title);
+        obj.map[type].map[title] = { index, link };
+      })
+      return obj;
+    },
+    titleList() {
+      this.input.title = null;
+      if (this.input.type) {
+        return this.typeList.map[this.input.type]
+      } else {
+        return []
+      }
+    }
+  }
+})

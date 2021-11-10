@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <link
+    rel="stylesheet"
+    href="./scss/style.css"
+  >
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <section class="main-content">
+      <!-- 搜尋區 -->
+      <div class="search-area">
+        <select
+          name="regionSearch"
+          class="regionSearch form-select"
+        >
+        </select>
+        <select
+          name="priceSearch"
+          class="priceSearch form-select"
+        >
+          <option
+            value="金額搜尋"
+            disabled
+            selected
+            hidden
+          >金額搜尋</option>
+          <option value="">全部金額</option>
+          <option value="1500 元以上">1500 元以上</option>
+          <option value="1000-1500 元">1000-1500 元</option>
+          <option value="500-1000 元">500-1000 元</option>
+          <option value="500 元以下">500 元以下</option>
+        </select>
+        <input
+          type="text"
+          class="textSearch form-select"
+          placeholder="搜尋"
+        >
+      </div>
+      <!-- 套票卡片區 -->
+      <ul class="ticketCard-area">
+
+      </ul>
+
+    </section>
+  </div>
+  <script src="./index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "vue_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "json": "json-server --watch db.json --port 8888"
+  },
+  "author": "Allen",
+  "license": "MIT"
+}
